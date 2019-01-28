@@ -42,7 +42,7 @@ abstract class TestCase extends OrchestraTestCase
     protected function getPackageAliases($app)
     {
         return [
-            'jolo-api' => JoloApiFacade::class,
+            'JoloApi' => JoloApiFacade::class,
         ];
     }
 }

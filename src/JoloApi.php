@@ -87,17 +87,6 @@ class JoloApi
         $this->mode = $mode;
         return $this;
     }
-
-    /**
-     * @param int $service
-     * return $this
-     */
-    public function setService(int $service): self
-    {
-        $this->service = $service;
-        return $this;
-    }
-
     /**
      * @param string $userId
      * return $this
@@ -117,7 +106,6 @@ class JoloApi
         $this->type = $type;
         return $this;
     }
-
     /*
      * Retrieve Balance details
      * https://jolosoft.com/docs.php

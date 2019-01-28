@@ -29,7 +29,9 @@ class JoloApiServiceProvider extends ServiceProvider
     public function boot()
     {
         $configPath = __DIR__ . '/../config/jolo-api.php';
-        $this->publishes([$configPath => config_path('jolo-api.php')]);
+        $this->publishes([
+            $configPath => config_path('courier.php'),
+        ]);
     }
 
     /**
@@ -39,7 +41,7 @@ class JoloApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(JoloApi::class, function () {
+        $this->app->bind(JoloApi::class, function () {
             $config = config('jolo-api');
             $this->checkInvalidConfiguration($config);
             return JoloApiFactory::createForConfig($config);

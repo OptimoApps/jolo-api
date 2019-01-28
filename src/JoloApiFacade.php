@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static self checkBalance()
  * @method static self agentSignUp()
  * @method static self verifyAgent()
- * @see JoloApi
+ * @see \OptimoApps\JoloApi\JoloApi
  */
 class JoloApiFacade extends Facade
 {

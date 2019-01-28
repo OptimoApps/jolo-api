@@ -14,7 +14,7 @@ use Exception;
 
 /**
  * Class InvalidConfiguration
- * @package Optimo\JoloApi\Exceptions
+ * @package OptimoApps\JoloApi\Exceptions
  */
 class InvalidConfiguration extends Exception
 {

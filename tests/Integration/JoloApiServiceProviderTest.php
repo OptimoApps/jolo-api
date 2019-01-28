@@ -11,7 +11,7 @@
 namespace OptimoApps\JoloApi\Test\Integration;
 
 use OptimoApps\JoloApi\Exceptions\InvalidConfiguration;
-use OptimoApps\JoloApi\JoloApiFacade;
+use JoloApi;
 
 
 class JoloApiServiceProviderTest extends  TestCase
@@ -20,7 +20,7 @@ class JoloApiServiceProviderTest extends  TestCase
     public function throw_exception_key_not_set(){
         $this->app['config']->set('jolo-api.key', '');
         $this->expectException(InvalidConfiguration::class);
-        JoloApiFacade::checkBalance();
+        JoloApi::checkBalance()->toArray();
     }
 
     /** @test */
@@ -28,6 +28,6 @@ class JoloApiServiceProviderTest extends  TestCase
         $this->app['config']->set('jolo-api.key', 'key');
         $this->app['config']->set('jolo-api.userid','');
         $this->expectException(InvalidConfiguration::class);
-        JoloApiFacade::checkBalance();
+        JoloApi::checkBalance()->toArray();
     }
 }

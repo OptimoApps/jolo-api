@@ -29,7 +29,6 @@ class JoloApiFactory
             ->setKey($config['key'])
             ->setMode(empty($config['mode'])?0:1)
             ->setType('json')
-            ->setService($config['service'])
             ->setUserId($config['userid']);
     }
 }
