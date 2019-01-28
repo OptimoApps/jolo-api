@@ -1,10 +1,10 @@
 ---
-![Laravel5 Jolo Api](https://github.com/OptimoApps/laravel-joloapi/docs/laravel_jolo_api.png)
+![Laravel5 Jolo Api](https://www.optimoapps.com/images/laravel_jolo_api.png)
 #### Laravel 5 Package for Jolo Api(unofficial)
 
 ---
 
-##Installation
+## Installation
 
 This package can be installed through Composer.
 
@@ -24,11 +24,11 @@ The following config file will be published in config/jolo-api.php
         'mode' => 0   //Change 1 for live
     ];
     
-##Usage
+## Usage
     use Optimo/JoloApi
     
-##Security
+## Security
 If you discover any security related issues, please email info@optimoapps.com instead of using the issue tracker.     
 
-##License
+## License
 The MIT License (MIT). Please see [License File](https://github.com/OptimoApps/laravel-joloapi/blob/master/LICENSE.md) for more information.       
