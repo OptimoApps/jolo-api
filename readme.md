@@ -3,6 +3,8 @@
   <img width="500" height="300" src="https://www.optimoapps.com/images/laravel_jolo_api.png">
 </p>
 
+[![Build Status](https://travis-ci.org/OptimoApps/laravel-joloapi.svg?branch=master)](https://travis-ci.org/OptimoApps/laravel-joloapi)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/OptimoApps/laravel-joloapi/blob/master/LICENSE.md)
 #### Laravel 5 Package for Jolo Api(unofficial)
 
 ---
