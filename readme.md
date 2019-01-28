@@ -1,6 +1,6 @@
 ---
 <p align="center">
-  <img width="300" height="300" src="https://www.optimoapps.com/images/laravel_jolo_api.png">
+  <img width="500" height="300" src="https://www.optimoapps.com/images/laravel_jolo_api.png">
 </p>
 
 #### Laravel 5 Package for Jolo Api(unofficial)
@@ -29,7 +29,11 @@ The following config file will be published in config/jolo-api.php
     
 ## Usage
     use Optimo/JoloApi
-    
+## Testing
+Run the tests with:
+
+    vendor/bin/phpunit
+        
 ## Security
 If you discover any security related issues, please email info@optimoapps.com instead of using the issue tracker.     
 
