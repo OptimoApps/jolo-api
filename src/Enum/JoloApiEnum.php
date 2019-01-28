@@ -9,7 +9,7 @@
  *
  */
 
-namespace Optimo\JoloApi\Enum;
+namespace OptimoApps\JoloApi\Enum;
 
 
 final class JoloApiEnum

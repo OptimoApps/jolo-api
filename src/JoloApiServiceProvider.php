@@ -9,11 +9,11 @@
  *
  */
 
-namespace Optimo\JoloApi;
+namespace OptimoApps\JoloApi;
 
 
 use Illuminate\Support\ServiceProvider;
-use Optimo\JoloApi\Exceptions\InvalidConfiguration;
+use OptimoApps\JoloApi\Exceptions\InvalidConfiguration;
 
 /**
  * Class JoloApiServiceProvider

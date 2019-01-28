@@ -9,10 +9,10 @@
  *
  */
 
-namespace Optimo\JoloApi\Test\Integration;
+namespace OptimoApps\JoloApi\Test\Integration;
 
-use Optimo\JoloApi\JoloApiFacade;
-use Optimo\JoloApi\JoloApiServiceProvider;
+use OptimoApps\JoloApi\JoloApiFacade;
+use OptimoApps\JoloApi\JoloApiServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class TestCase extends OrchestraTestCase
