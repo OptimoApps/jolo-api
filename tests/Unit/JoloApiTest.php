@@ -9,11 +9,11 @@
  *
  */
 
-namespace Optimo\JoloApi\Test\Unit;
+namespace OptimoApps\JoloApi\Test\Unit;
 
 
 use Mockery;
-use Optimo\JoloApi\JoloApi;
+use OptimoApps\JoloApi\JoloApi;
 use PHPUnit\Framework\TestCase;
 
 /**

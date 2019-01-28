@@ -13,13 +13,13 @@
 
 This package can be installed through Composer.
 
-    composer require OptimoApps/laravel-joloapi
+    composer require optimoapps/jolo-api
     
 In Laravel 5.5 and above the package will autoregister the service provider.
 
 Publish the config file of this package with this command:
 
-    php artisan vendor:publish --provider="OptimoApps/laravel-joloapi/JoloApiServiceProvider"
+    php artisan vendor:publish --provider="OptimoApps/JoloApi/JoloApiServiceProvider"
     
 The following config file will be published in config/jolo-api.php
 

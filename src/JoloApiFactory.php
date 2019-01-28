@@ -9,7 +9,7 @@
  *
  */
 
-namespace Optimo\JoloApi;
+namespace OptimoApps\JoloApi;
 
 use GuzzleHttp\Client;
 

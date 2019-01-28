@@ -1,5 +1,5 @@
 {
-  "name": "optimo/joloapi",
+  "name": "optimoapps/jolo-api",
   "description": "A Laravel package for Jolo API money transfer",
   "keywords": [
     "jolo api",
@@ -21,12 +21,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Optimo\\JoloApi\\": "src/"
+      "OptimoApps\\JoloApi\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Optimo\\JoloApi\\Test\\": "tests/"
+      "OptimoApps\\JoloApi\\Test\\": "tests/"
     }
   },
   "scripts": {
@@ -38,10 +38,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Optimo\\JoloApi\\JoloApiServiceProvider"
+        "OptimoApps\\JoloApi\\JoloApiServiceProvider"
       ],
       "aliases": {
-        "JoloApi": "Optimo\\JoloApi\\JoloApiFacade"
+        "JoloApi": "OptimoApps\\JoloApi\\JoloApiFacade"
       }
     }
   },

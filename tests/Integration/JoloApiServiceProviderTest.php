@@ -8,10 +8,10 @@
  *  *
  *
  */
-namespace Optimo\JoloApi\Test\Integration;
+namespace OptimoApps\JoloApi\Test\Integration;
 
-use Optimo\JoloApi\Exceptions\InvalidConfiguration;
-use Optimo\JoloApi\JoloApiFacade;
+use OptimoApps\JoloApi\Exceptions\InvalidConfiguration;
+use OptimoApps\JoloApi\JoloApiFacade;
 
 
 class JoloApiServiceProviderTest extends  TestCase

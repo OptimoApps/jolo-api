@@ -9,14 +9,14 @@
  *
  */
 
-namespace Optimo\JoloApi;
+namespace OptimoApps\JoloApi;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException as HttpBadResponseException;
 use GuzzleHttp\Exception\ClientException as HttpClientException;
 use GuzzleHttp\Exception\ServerException as HttpServerException;
 use Illuminate\Support\Fluent;
-use Optimo\JoloApi\Enum\JoloApiEnum;
+use OptimoApps\JoloApi\Enum\JoloApiEnum;
 use Psr\Http\Message\StreamInterface;
 
 /**

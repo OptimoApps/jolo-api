@@ -9,7 +9,7 @@
  *
  */
 
-namespace Optimo\JoloApi\Exceptions;
+namespace OptimoApps\JoloApi\Exceptions;
 use Exception;
 
 /**
