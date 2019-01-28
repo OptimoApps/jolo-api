@@ -1,5 +1,8 @@
 ---
-![Laravel5 Jolo Api](https://www.optimoapps.com/images/laravel_jolo_api.png)
+<p align="center">
+  <img width="300" height="300" src="https://www.optimoapps.com/images/laravel_jolo_api.png">
+</p>
+
 #### Laravel 5 Package for Jolo Api(unofficial)
 
 ---
@@ -14,7 +17,7 @@ In Laravel 5.5 and above the package will autoregister the service provider.
 
 Publish the config file of this package with this command:
 
-    php artisan vendor:publish --provider="OptimoApps/laravel-joloapi\JoloApiServiceProvider"
+    php artisan vendor:publish --provider="OptimoApps/laravel-joloapi/JoloApiServiceProvider"
     
 The following config file will be published in config/jolo-api.php
 
