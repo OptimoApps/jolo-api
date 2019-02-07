@@ -123,7 +123,7 @@ class JoloApi
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
-            $response = $this->makeHttpRequest(JoloApiEnum::BALANCE_CHECK, $queryParams)->getContents();
+            $response = $this->makeHttpRequest(JoloApiEnum::AGENT_SIGNUP, $queryParams)->getContents();
             $this->response = json_decode($response);
             return $this;
         } catch (\Exception $e) {
@@ -143,7 +143,7 @@ class JoloApi
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
-            $response = $this->makeHttpRequest(JoloApiEnum::BALANCE_CHECK, $queryParams)->getContents();
+            $response = $this->makeHttpRequest(JoloApiEnum::VERIFY_AGENT, $queryParams)->getContents();
             $this->response = json_decode($response);
             return $this;
         } catch (\Exception $e) {
@@ -183,7 +183,7 @@ class JoloApi
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
-            $response = $this->makeHttpRequest(JoloApiEnum::AGENT_DETAIL, $queryParams)->getContents();
+            $response = $this->makeHttpRequest(JoloApiEnum::BENEFICIARY_REGISTRATION, $queryParams)->getContents();
             $this->response = json_decode($response);
             return $this;
         } catch (\Exception $e) {
@@ -225,7 +225,7 @@ class JoloApi
     {
         try {
             $queryParams = array_merge(['txn' => $orderId], $this->buildQueryString());
-            $response = $this->makeHttpRequest(JoloApiEnum::TRANSFER_MONEY, $queryParams)->getContents();
+            $response = $this->makeHttpRequest(JoloApiEnum::TRANSFER_STATUS_CHECK, $queryParams)->getContents();
             $this->response = json_decode($response);
             return $this;
         } catch (\Exception $e) {
@@ -261,7 +261,8 @@ class JoloApi
     {
         return [
             'key' => $this->key,
-            'type' => $this->type
+            'type' => $this->type,
+            'mode'=> $this->mode
         ];
     }
 
