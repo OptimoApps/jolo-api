@@ -11,6 +11,5 @@
 
 return [
     'key' => '',   //Provide your api key
-    'userid' => '',
     'mode' => 0   //Change 1 for live
 ];

@@ -28,7 +28,6 @@ class JoloApiFactory
         return (new JoloApi(new Client()))
             ->setKey($config['key'])
             ->setMode(empty($config['mode'])?0:1)
-            ->setType('json')
-            ->setUserId($config['userid']);
+            ->setType('json');
     }
 }

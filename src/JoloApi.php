@@ -33,10 +33,6 @@ class JoloApi
     /**
      * @var string
      */
-    protected $userId;
-    /**
-     * @var string
-     */
     protected $key;
     /**
      * @var string
@@ -87,16 +83,6 @@ class JoloApi
         $this->mode = $mode;
         return $this;
     }
-    /**
-     * @param string $userId
-     * return $this
-     */
-    public function setUserId(string $userId): self
-    {
-        $this->userId = $userId;
-        return $this;
-    }
-
     /**
      * @param string $type
      * return $this
