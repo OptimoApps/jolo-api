@@ -58,8 +58,5 @@ class JoloApiServiceProvider extends ServiceProvider
         if (empty($config['key'])) {
             throw InvalidConfiguration::keyNotSpecified();
         }
-        if (empty($config['userid'])) {
-            throw InvalidConfiguration::userIdNotSpecified();
-        }
     }
 }

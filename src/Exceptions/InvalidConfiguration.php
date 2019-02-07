@@ -10,6 +10,7 @@
  */
 
 namespace OptimoApps\JoloApi\Exceptions;
+
 use Exception;
 
 /**
@@ -24,14 +25,6 @@ class InvalidConfiguration extends Exception
     public static function keyNotSpecified()
     {
         return new static('There was no key specified in config file');
-    }
-
-    /**
-     * @return InvalidConfiguration
-     */
-    public static function userIdNotSpecified()
-    {
-        return new static('There was no userid specified in config file');
     }
 
 }
