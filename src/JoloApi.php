@@ -260,7 +260,6 @@ class JoloApi
     private function buildQueryString(): array
     {
         return [
-            'userid' => $this->userId,
             'key' => $this->key,
             'type' => $this->type
         ];
