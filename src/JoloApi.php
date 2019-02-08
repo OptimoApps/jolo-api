@@ -83,6 +83,7 @@ class JoloApi
         $this->mode = $mode;
         return $this;
     }
+
     /**
      * @param string $type
      * return $this
@@ -92,6 +93,7 @@ class JoloApi
         $this->type = $type;
         return $this;
     }
+
     /*
      * Retrieve Balance details
      * https://jolosoft.com/docs.php
@@ -192,6 +194,27 @@ class JoloApi
     }
 
     /**
+     *  Beneficiary Registration verification
+     * https://jolosoft.com/docs.php
+     * @param array $params
+     * ['service'] Mobile no of agent
+     * ['beneficiaryid'] Beneficiary ID
+     * ['otp'] otp received on mobile
+     * @return $this
+     */
+    public function beneficiaryRegistrationVerify(array $params)
+    {
+        try {
+            $queryParams = array_merge($params, $this->buildQueryString());
+            $response = $this->makeHttpRequest(JoloApiEnum::BENEFICIARY_VERIFY, $queryParams)->getContents();
+            $this->response = json_decode($response);
+            return $this;
+        } catch (\Exception $e) {
+            report($e);
+        }
+    }
+
+    /**
      * Transfer Money
      * https://jolosoft.com/docs.php
      * @param array $params
@@ -262,7 +285,7 @@ class JoloApi
         return [
             'key' => $this->key,
             'type' => $this->type,
-            'mode'=> $this->mode
+            'mode' => $this->mode
         ];
     }
 

@@ -19,6 +19,7 @@ final class JoloApiEnum
     const VERIFY_AGENT = 'https://jolosoft.com/dmr/cdmr_signup_verify.php';
     const AGENT_DETAIL = 'https://jolosoft.com/dmr/cdmr_detail.php';
     const BENEFICIARY_REGISTRATION = 'http://jolosoft.com/dmr/cdmr_beneficiary_reg.php';
+    const BENEFICIARY_VERIFY = 'https://jolosoft.com/dmr/cdmr_beneficiary_reg_verify.php';
     const BENEFICIARY_DETAIL = 'http://jolosoft.com/dmr/cdmr_beneficiary_reg.php';
     const BENEFICIARY_DELETE = 'https://jolosoft.com/dmr/cdmr_beneficiary_del.php';
     const TRANSFER_MONEY = 'https://jolosoft.com/dmr/cdmr_transfer.php';

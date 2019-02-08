@@ -62,6 +62,7 @@ class JoloApiTest extends TestCase
         $this->assertEquals('SUCCESS', (json_decode($response))->status);
 
     }
+
     /**
      * @test
      */
@@ -75,6 +76,38 @@ class JoloApiTest extends TestCase
                     'time' => 'March 02 2018 05:50:12 PM'
                 ]);
         $response = $this->joloApi->checkBalance()->toArray();
+        $this->assertTrue(is_array($response));
+        $this->assertArrayHasKey('time', $response);
+    }
+
+    /**
+     * @test
+     */
+    public function verify_transfer_money_array()
+    {
+        $this->joloApi->shouldReceive('transferMoney->toArray')
+            ->once()
+            ->andReturn(
+                ['status' => 'SUCCESS',
+                    'service' => 9999999999,
+                    'beneficiaryid' => '50200022054385_HDFC0000563',
+                    'orderid' => '11111111',
+                    'txid' => 'C201810151399850111',
+                    'amount' => 100,
+                    'charged' => 106,
+                    'bankid' => '81241816536',
+                    'desc' => 'Transfer completed successfully',
+                    'error' => "", 'balance' => 10,
+                    'time' => 'March 02 2018 05:50:12 PM'
+                ]);
+        $params = [
+            'service' => 9999999999,
+            'beneficiaryid' => '50200022054385_HDFC0000563',
+            'orderid' => 11111111,
+            'amount' => 100,
+            'remarks' => 'test'
+        ];
+        $response = $this->joloApi->transferMoney($params)->toArray();
         $this->assertTrue(is_array($response));
         $this->assertArrayHasKey('time', $response);
     }

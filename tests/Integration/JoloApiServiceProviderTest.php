@@ -23,11 +23,4 @@ class JoloApiServiceProviderTest extends  TestCase
         JoloApi::checkBalance()->toArray();
     }
 
-    /** @test */
-    public function throw_exception_userid_not_set(){
-        $this->app['config']->set('jolo-api.key', 'key');
-        $this->app['config']->set('jolo-api.userid','');
-        $this->expectException(InvalidConfiguration::class);
-        JoloApi::checkBalance()->toArray();
-    }
 }
