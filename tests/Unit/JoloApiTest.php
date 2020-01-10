@@ -30,7 +30,7 @@ class JoloApiTest extends TestCase
     /**
      *
      */
-    public function setUp()
+    public function setUp():void
     {
 
         $this->joloApi = Mockery::mock(JoloApi::class);
@@ -39,7 +39,7 @@ class JoloApiTest extends TestCase
     /**
      *
      */
-    public function tearDown()
+    public function tearDown():void
     {
         Mockery::close();
     }
