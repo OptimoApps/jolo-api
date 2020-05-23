@@ -293,6 +293,7 @@ class JoloApi
             $queryParams = array_merge($params, $this->buildQueryString());
             $response = $this->makeHttpRequest(JoloApiEnum::TANSFER_UNLIMITED_API, $queryParams)->getContents();
             $this->response = json_decode($response);
+
             return $this;
         } catch (\Exception $e) {
             report($e);
