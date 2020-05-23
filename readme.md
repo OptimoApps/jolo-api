@@ -1,6 +1,7 @@
 ---
 #### Laravel 5 Package for Jolo Api(unofficial)
-[![Build Status](https://travis-ci.org/OptimoApps/laravel-joloapi.svg?branch=master)](https://travis-ci.org/OptimoApps/laravel-joloapi)
+![run-tests](https://github.com/OptimoApps/jolo-api/workflows/run-tests/badge.svg)
+![Check & fix styling](https://github.com/OptimoApps/jolo-api/workflows/Check%20&%20fix%20styling/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/OptimoApps/laravel-joloapi/blob/master/LICENSE.md)
 [![Latest Stable Version](https://poser.pugx.org/optimoapps/jolo-api/version)](https://packagist.org/packages/optimoapps/jolo-api)
 [![Total Downloads](https://poser.pugx.org/optimoapps/jolo-api/downloads)](https://packagist.org/packages/optimoapps/jolo-api)
