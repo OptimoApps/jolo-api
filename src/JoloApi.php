@@ -287,13 +287,12 @@ class JoloApi
      *
      * @return $this
      */
-    public function transerMoneyUsingUnlimitedAPI(array $params): ?self
+    public function transferMoneyUsingUnlimitedAPI(array $params): ?self
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
-            $response = $this->makeHttpRequest(JoloApiEnum::TRANSFER_MONEY, $queryParams)->getContents();
+            $response = $this->makeHttpRequest(JoloApiEnum::TANSFER_UNLIMITED_API, $queryParams)->getContents();
             $this->response = json_decode($response);
-
             return $this;
         } catch (\Exception $e) {
             report($e);
