@@ -4,7 +4,7 @@
  *  *  * Copyright (C) Optimo Technologies - All Rights Reserved
  *  *  * Unauthorized copying of this file, via any medium is strictly prohibited
  *  *  * Proprietary and confidential
- *  *  * Written by Sathish Kumar(satz) <sathish.thi@gmail.com>ManiKandan<smanikandanit@gmail.com >
+ *  *  * Written by Sathish Kumar(satz) <sathish.thi@gmail.com> ManiKandan<smanikandanit@gmail.com >
  *  *
  *
  */
@@ -141,7 +141,7 @@ class JoloApi
      * ['otp']otp received on mobile (4 digit)
      * @return $this
      */
-    public function verifyAgent(array $params)
+    public function verifyAgent(array $params): ?self
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
@@ -160,7 +160,7 @@ class JoloApi
      * ['service'] int Mobile number of agent
      * @return $this
      */
-    public function agentDetail(array $params)
+    public function agentDetail(array $params): ?self
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
@@ -181,7 +181,7 @@ class JoloApi
      * ['beneficiary_account_no'] String Beneficiary Account No
      * @return $this
      */
-    public function beneficiaryRegistration(array $params)
+    public function beneficiaryRegistration(array $params): ?self
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
@@ -202,7 +202,7 @@ class JoloApi
      * ['otp'] otp received on mobile
      * @return $this
      */
-    public function beneficiaryRegistrationVerify(array $params)
+    public function beneficiaryRegistrationVerify(array $params): ?self
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
@@ -226,7 +226,7 @@ class JoloApi
      * ['remarks'] string Remarks text
      * @return $this
      */
-    public function transferMoney(array $params)
+    public function transferMoney(array $params): ?self
     {
         try {
             $queryParams = array_merge($params, $this->buildQueryString());
@@ -244,11 +244,34 @@ class JoloApi
      * @param string $orderId Jolo Order ID (which will be from transfer money)
      * @return $this
      */
-    public function checkTransferStatus(string $orderId)
+    public function checkTransferStatus(string $orderId): ?self
     {
         try {
             $queryParams = array_merge(['txn' => $orderId], $this->buildQueryString());
             $response = $this->makeHttpRequest(JoloApiEnum::TRANSFER_STATUS_CHECK, $queryParams)->getContents();
+            $this->response = json_decode($response);
+            return $this;
+        } catch (\Exception $e) {
+            report($e);
+        }
+    }
+
+    /**
+     * This API is used to Transfer the money to the beneficiary.
+     * In case transaction goes timeout then use transfer_status call to get updated status of transaction after some time. We take small fee for this transfer api call on SUCCESS transaction only.
+     *  * @param array $params
+     * ['beneficiary_ifsc'] beneficiary bank ifsc
+     * ['beneficiary_account_no'] String Beneficiary Account No
+     * ['orderid'] string Unique Order Id Generated from the script
+     * ['amount'] int amount range is 0 to 200000
+     * ['purpose'] SALARY_DISBURSEMENT, REIMBURSEMENT, BONUS, INCENTIVE, OTHERS
+     * @return $this
+     */
+    public function transerMoneyUsingUnlimitedAPI(array $params): ?self
+    {
+        try {
+            $queryParams = array_merge($params, $this->buildQueryString());
+            $response = $this->makeHttpRequest(JoloApiEnum::TRANSFER_MONEY, $queryParams)->getContents();
             $this->response = json_decode($response);
             return $this;
         } catch (\Exception $e) {
@@ -292,9 +315,9 @@ class JoloApi
     /**
      * Perform Jolo API request & return response.
      *
+     * @return \Psr\Http\Message\StreamInterface
      * @throws \Exception
      *
-     * @return \Psr\Http\Message\StreamInterface
      */
     private function makeHttpRequest(string $api, array $queryParams): StreamInterface
     {
